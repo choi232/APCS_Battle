@@ -12,3 +12,13 @@
 //2 colored set of pets
 
 //git functionality test
+
+public class Board{
+
+	//constructor no return type cant have void or anything means its a constructor and constructor method name is file or class name
+	public Board(){
+		char[][] bdShips = new char[10][10]; //declare and initialize w capacity
+		char[][] bdGuess = new char[10][10]; //declare and initialize w capacity
+	}
+	
+}

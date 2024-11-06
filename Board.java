@@ -21,7 +21,8 @@ public class Board{
 	
 	
 	/*
-	function checkShip takes two int parameters (row, col) and returns true if there is a ship at that index and false if not
+	Function checkShip takes two int parameters (row, col) and returns true if there is a ship at that index and false if not
+	Purpose: verify if guess is right or not
 	 */
 	public boolean checkShip(int row, int col){ //chose to use 'S' to signify a ship
 		if(board[row][col] == 'S'){ //checks if board has a ship ('S') there it returns true
@@ -32,7 +33,8 @@ public class Board{
 	
 	
 	/*
-	function printBoard returns no value and takes no parameters but prints out the current state of the board
+	Function printBoard returns no value and takes no parameters
+	Purpose: prints out the current state of the board
 	*/
 	public void printBoard(){ //if you name the method toString it will not allow you to run it since it would be overriding toString from String library so I called it printBoard
 		int letter = 65;

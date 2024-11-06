@@ -12,3 +12,35 @@
 //2 colored set of pets
 
 //git functionality test
+
+public class Board{
+	
+	char[][] board = new char[10][10];
+	char[][] board = new char[10][10];
+	
+	//constructor
+	public Board(){
+	}
+	
+	
+	/*
+	 
+	 */
+	public boolean checkShip(int row, int col){
+		if(board[row][col] == 's'){
+			return false;
+		}
+	}
+	
+	
+	/*
+	 
+	*/
+	public void toString(){
+		for(int r = 0; r < 10; r++){
+			for(int c = 0; c < 10; c++){
+			
+			}
+		}
+	}
+}

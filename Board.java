@@ -15,11 +15,20 @@
 
 public class Board{
 	
-	char[][] board = new char[10][10];
-	char[][] board = new char[10][10];
+	//char[][] board = new char[10][10];
+	
+	char[][] board = {{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}};
+	
+	/*
+	for(int r = 0; r < 10; r++){
+		for(int c = 0; c < 10; c++){
+			board[r][c] = '0';
+		}
+	}
+	*/
 	
 	//constructor
-	public Board(){
+	public Board(){	
 	}
 	
 	
@@ -37,9 +46,10 @@ public class Board{
 	 
 	*/
 	public void toString(){
+		System.out.println("0 1 2 3 4 5 6 7 8 9"); //header for columns also used 0-9 instead of 0-10 otherwise there will be an uneven spacing
 		for(int r = 0; r < 10; r++){
 			for(int c = 0; c < 10; c++){
-			
+				System.out.print(board[r][c] + " ");
 			}
 		}
 	}

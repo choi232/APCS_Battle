@@ -16,6 +16,9 @@ public class Main{
     
     Board b = new Board();
     b.printBoard();
+    b.placeShip(2, 8, 8, false);
+    b.placeShip(5, 1, 0, true);
+    b.printBoard();
   }
 
 }

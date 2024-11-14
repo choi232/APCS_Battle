@@ -1,20 +1,42 @@
 /*
  * Author: Mikael
  * 
- * Pupose: Create class from which players will be created with ncessary objects of other classes such as boards to play Battleship
+ * Pupose: Create class from which players will be created with necessary objects of other classes such as boards to play Battleship
  * 
  */
+ 
+ import java.util.Scanner;
+ 
 public class Player{
 	private String name;
-	private Board board;
+	private Board boardShips;
+	private Board boardGuesses;
+	private Scanner scan = new Scanner(System.in); //instantiate scan from Scanner
+	
 	public Player(){
-		Scanner scan = new Scanner(System.in); //instantiate scan from Scanner
 		System.out.println("Enter Player Name: ");
-		name = scanner.nextLine(); //set input to name attribute in Player
-		board = new Board(); //create a new board object for each Player object
+		name = scan.nextLine(); //set input to name attribute in Player
+		Board boardShips = new Board(); //instantiate Board object
+		Board boardGuesses = new Board();
 	}
 	
-	public boolean guess(){
 	
+	public Player(String computerName){
+		name = computerName;
+		Board boardShips = new Board(); //instantiate Board object
+		Board boardGuesses = new Board();
 	}
+	
+	public Board getBoardShips(){
+		return boardShips;
+	}
+	
+	public Board getBoardGuesses(){
+		return boardGuesses;
+	}
+	
+	/*public boolean guess(){
+		
+	}
+	*/
 }

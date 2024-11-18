@@ -1,9 +1,14 @@
 /*
+Author: Mikael
+
+Purpose: to build a board for battleship
+
+2 boards letters down the side and numbers across the top (10x10 board)
+5 different ship types
 Carrier has 5 pegs
 2 colored set of pets
 */
 import java.util.Scanner;
-<<<<<<< HEAD
 public class Board {
 	
 	char[][] ships;
@@ -23,15 +28,6 @@ public class Board {
 			}
 		}
 		
-=======
-public class Board{
-	char[][] ships = new char[10][10];
-	char[][] guess = new char[10][10];
-	
-	//constructor
-	public Board(){	
-		setBoard();
->>>>>>> 6178c3cae4b9e542f61d4f2fe9067b27784d08ca
 	}
 	/*
 	function checkShip takes two int parameters (row, col) as well as board object and returns true if there is a ship at that index and false if not
@@ -69,7 +65,6 @@ public class Board{
 			System.out.println(); //print \n to create line break between each row
 		}
 	}
-<<<<<<< HEAD
 
 
 	/*
@@ -82,42 +77,10 @@ public class Board{
 	*/
 	public boolean placeShip(int len, int sRowStart, int sColStart, boolean vertical) {
 	int sRowEnd, sColEnd;
-=======
-	
-
-
-	public void setMarker(char[][] board, char marker, int row, int col){
-		board[row][col] = marker;
-	}
-
-	public void setBoard(){
-		for (int row = 0; row < 10; row++){
-			for (int col = 0; col < 10; col++){
-				ships[row][col] = '.';
-				guess[row][col] = '.';
-			}
-		}
-		
-	}
-	/*
-	method to place the ships from point (sRowStart, sColStart) to desired length
-	placeShip requires sRowStart and sColStart to be a value from 0-9 as it considers the first row/col of the board at 0 not 1
-	if vertical is true, it places ship vertically downwards from startpoint
-	if vertical is false, it places ship horizontally to the right from the start point
-	*/
-	public boolean placeShip(int len, int sRowStart, int sColStart, boolean vertical) {
-		
-		int sRowEnd, sColEnd;
-		
->>>>>>> 6178c3cae4b9e542f61d4f2fe9067b27784d08ca
 		if(vertical){
 			//calculate endpoint if ship is placed downwards
 			sRowEnd = sRowStart + len;
 			sColEnd = sColStart;
-<<<<<<< HEAD
-=======
-
->>>>>>> 6178c3cae4b9e542f61d4f2fe9067b27784d08ca
 		}
 		else{
 			//calculate endpoint if ship is placed to the left
@@ -125,54 +88,27 @@ public class Board{
 			sColEnd = sColStart + len;
 		}
 		
-<<<<<<< HEAD
 		if(len > 5 || len < 2 || sRowEnd < 0 || sColEnd < 0 || sRowEnd > 9 ||sColEnd > 9){
 			return false;
 		}
 		if(vertical){
-=======
-		//detect if ships is within bounds of 10x10 board and if len is within acceptable ship sizes
-		if(len > 5 || len < 2 || sRowEnd < 0 || sColEnd < 0 || sRowEnd > 9 || sColEnd > 9){
-			return false;
-		}
-		
-
-		if(vertical){
-			
-			//check if ship is already placed in path and if so returns false
->>>>>>> 6178c3cae4b9e542f61d4f2fe9067b27784d08ca
 			for(int row = sRowStart; row < (sRowStart + len); row++){
 				if(ships[row][sColStart] == 's'){
 					return false;
 				}
 			}
-<<<<<<< HEAD
 				//places ship from start point and downwards
-=======
-			//places ship from start point and downwards
->>>>>>> 6178c3cae4b9e542f61d4f2fe9067b27784d08ca
 			for(int row = sRowStart; row < (sRowStart + len); row++){
 				ships[row][sColStart] = 's';
 			}
 			return true;
 		}
-<<<<<<< HEAD
 		else {
-=======
-		
-		else {
-			
-			//check if ship is already placed in path and if so returns false
->>>>>>> 6178c3cae4b9e542f61d4f2fe9067b27784d08ca
 			for(int col = sColStart; col < (sColStart + len); col++){
 				if(ships[sRowStart][col] == 's'){
 					return false;
 				}
 			}
-<<<<<<< HEAD
-=======
-			
->>>>>>> 6178c3cae4b9e542f61d4f2fe9067b27784d08ca
 			//places ship from start point and to the right
 			for(int col = sColStart; col < (sColStart + len); col++){
 				ships[sRowStart][col] = 's';
@@ -182,7 +118,3 @@ public class Board{
 	}
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6178c3cae4b9e542f61d4f2fe9067b27784d08ca

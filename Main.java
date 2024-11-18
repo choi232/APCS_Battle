@@ -15,19 +15,15 @@ public class Main{
     */
     
     Board b = new Board();
-<<<<<<< HEAD
+
     b.placeShip(2,3,5,true);
     b.placeShip(5,2,2,true);
     b.placeShip(3,0,0,true);
     b.placeShip(4,1,6,true);
     b.placeShip(4,9,0,false);
 	b.printBoard();
-=======
-    b.printBoard();
-    b.placeShip(2, 8, 8, false);
-    b.placeShip(5, 1, 0, true);
-    b.printBoard();
->>>>>>> 6178c3cae4b9e542f61d4f2fe9067b27784d08ca
+
+
   }
 
 }

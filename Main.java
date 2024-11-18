@@ -15,7 +15,12 @@ public class Main{
     */
     
     Board b = new Board();
-    b.printBoard();
+    b.placeShip(2,3,5,true);
+    b.placeShip(5,2,2,true);
+    b.placeShip(3,0,0,true);
+    b.placeShip(4,1,6,true);
+    b.placeShip(4,9,0,false);
+	b.printBoard();
   }
 
 }
